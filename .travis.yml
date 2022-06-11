@@ -4,11 +4,11 @@ cache:
     - node_modules
     - ~/.npm
 node_js:
-  - '18'
+  - '17'
 git:
   depth: 3
 script:
-  - yarn build
+  - yarn test
 
 deploy:
   provide: pages
@@ -17,6 +17,6 @@ deploy:
   api_key: $GITHUB_TOKEN
  local-dir: public/
  target-branch: gh-pages
- 
+
 on: 
   branch: main
